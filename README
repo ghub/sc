@@ -40,3 +40,106 @@ MS1  PDP-11
 MS2  Motorola 680x0
 ML0  An ALGOR Machine, PASCAL Machine, QFORTH, The Forth Engine
 ML1  LISP machines
+
+Chapter 3 Multiple-stack, 0-operand Machines
+
+Canonical Stack Machine:
+
+Minimum components of an ML0 design:
+  the data bus
+  the data stack (DS)
+  the return stack (RS)
+  the arithmetic/logic unit (ALU) with its top of stack register (TOS)
+  the program counter (PC)
+  program memory with a memory address register (MAR)
+  control logic with an instruction register (IR)
+  an input/output section (I/O)
+
+Minimum set of operators:
+
+Instr-     Data Stack
+uction   input   -> output     Function
+
+ !       N1 ADDR ->            Store N1 at location ADDR in
+                               program memory
+
+ +       N1 N2   -> N3         Add N1 and N2, giving sum N3
+
+ -       N1 N2   -> N3         Subtract N2 from N1, giving
+                               difference N3
+
+ >R      N1      ->            Push N1 onto the return stack
+
+ @       ADDR    -> N1         Fetch the value at location
+                               ADDR in program memory,
+                               returning N1
+
+ AND     N1 N2   -> N3         Perform a bitwise AND on N1 and
+                               N2, giving result N3
+
+ DROP    N1      ->            Drop N1 from the stack
+
+ DUP     N1      -> N1 N1      Duplicate N1, returning a
+                               second copy of it on the stack
+
+ OR      N1 N2   -> N3         Perform a bitwise OR on N1 and
+                               N2, giving result N3
+
+ OVER    N1 N2   -> N1 N2 N1   Push a copy of the second
+                               element on the stack, N1, onto
+                               the top of the stack
+
+ R>              -> N1         Pop the top element of the
+                               return stack, and push it onto
+                               the data stack as N1
+
+ SWAP    N1 N2   -> N2 N1      Swap the order of the top two
+                               stack elements
+
+ XOR     N1  N2  -> N3         Perform a bitwise eXclusive OR
+                               on N1 and N2, giving result N3
+
+ [IF]    N1      ->            If N1 is false (value is 0)
+                               perform a branch to the address
+                               in the next program cell,
+                               otherwise continue
+
+ [CALL]          ->            Perform a subroutine call to
+                               the address in the next program
+                               cell
+
+ [EXIT]          ->            Perform a subroutine return
+
+ [LIT]           -> N1         Treat the value in the next
+                               program cell as an integer
+                               constant, and push it onto the
+                               stack as N1
+
+Infix notation, e.g. (12 + 45) * 98
+Postfix notation or Reverse Polish Notation (RPN), e.g. 98 12 45 + *
+
+Arithmetic and logical operators
+  +
+  -
+  AND
+  OR
+  XOR
+Stack manipulation operators
+  DROP
+  DUP
+  OVER
+  SWAP
+  >R
+  R>
+Memory fetching and storing
+  !
+  @
+Literals
+  [LIT]
+Instruction execution
+  [Fetch next instruction]
+  [IF]
+  [CALL]
+  [EXIT]
+
+Hardwired vs. microcoded instructions
