@@ -25,3 +25,18 @@ Low cost of context swithing
 Forth forms a stack machine that has two stacks:
   expression evaluation/parameter passing
   return addresses
+
+Chapter 2 A Taxonomy of Hardware Stack Support
+
+Attributes
+  The number of stacks: single or multiple
+  The size of stack buffer memories: small or large
+  The number of operands in the instruction format: 0, 1, or 2+
+
+SS1  HP3000
+SS2  Intel 80x86
+MS0  APL Language Machine, FORTRAN Machine
+MS1  PDP-11
+MS2  Motorola 680x0
+ML0  An ALGOR Machine, PASCAL Machine, QFORTH, The Forth Engine
+ML1  LISP machines
