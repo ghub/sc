@@ -1,0 +1,27 @@
+Stack Computers: the new wave
+Philip Koopman
+1989
+
+Chapter 1 Introduction and Review
+
+Last In First Out (LIFO)
+stack-based vs register-based
+Complex Instruction Set Computers (CISCs) vs Reduced Instruction Set Computers (RISCs)
+
+Expression evaluation stack, e.g. X = (A + B) * (C + D)
+The return address stack, e.g. recursion
+The local variable stack, e.g. recursion and reentrancy
+The parameter stack, e.g. recursion and reentrancy
+
+High performance without pipelining
+Very simple processor logic
+Very low system complexity
+Small program size
+Fast program execution
+Low interrupt response overhead
+Consistent program execution speeds across all time scales
+Low cost of context swithing
+
+Forth forms a stack machine that has two stacks:
+  expression evaluation/parameter passing
+  return addresses
