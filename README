@@ -147,3 +147,48 @@ Hardwired vs. microcoded instructions
 Chapter 4 Architecture of 16-bit Systems
 
 Chapter 5 Architecture of 32-bit Systems
+
+Chapter 6 Understanding Stack Machines
+
+CISC
+  DEC VAX
+  680x0
+  80x86
+RISC
+  Berkley RISC
+  Stanford MIPS
+Stack machines
+
+Register vs. non-register machines
+High level language vs. RISC machines
+
+Program size
+  Stack < CISC < RISC
+Processor and system complexity
+  Processor complexity
+    Stack < RISC < CISC
+  System complexity
+    Compiler complexity
+      Stack < CISC < RISC
+    Cache size
+      Stack < CISC < RISC
+
+Good candidates for stack machines
+  Subroutine intensive programs
+  Programs with a large number of control flow structures
+  Programs that perform symbolic computation (which often involves intensive use of stack structures and recursion)
+  Programs that are designed to handle frequent interrupts
+  Programs designed for limited memory space
+
+Stack management
+  Estimating stack size
+  Overflow handling
+    A very large stack memory
+    Demand fed single-element stack manager
+    Paging stack manager
+    An associative cache
+
+Interrupts and multi-tasking
+  Interrupt latency
+  Interrupt processing time
+  State saving overhead
