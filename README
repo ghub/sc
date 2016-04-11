@@ -192,3 +192,26 @@ Interrupts and multi-tasking
   Interrupt latency
   Interrupt processing time
   State saving overhead
+
+Chapter 7 Software Issues
+
+The importance of fast subroutine calls
+  The importance of small procedures
+  The proper size for a procedure
+  Why programmers don't use small procedures
+    The cost in speed of execution
+    Difficult to program
+    The traditions of batch processing
+
+Language choices
+  External forces, e.g. Ada for US Department of Defense contracts
+  Existance of compilers etc.
+  Intrinsic: reflect the entire system
+    The system operating environment
+    The suitability of the language to solve the problem at hand
+    Development time and costs
+    The maintainability of the finished product
+    The strengths of the underlying processor at running various languages
+    The previous programming experience of the programmers assigned to the project
+
+Uniformity of software interface
