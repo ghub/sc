@@ -215,3 +215,31 @@ Language choices
     The previous programming experience of the programmers assigned to the project
 
 Uniformity of software interface
+
+Chapter 8 Applications
+
+Real time embedded control
+  Size and weight
+  Power and cooling
+  Operating environment
+  Cost
+  Computing performance
+
+16-bit vs 32-bit hardware
+
+System implementation approaches
+  Hardwired system vs. microcoded system
+  Integration level and system cost/performance
+
+Example application areas
+  Image processing
+  Robotics controllers
+  Digital filters
+  Process control
+  Computer graphics
+  Other computer peripherals
+  Telecommunications
+  Automotive control
+  Consumer electronics
+  Military and spaceborne control applications
+  Parallel processing
